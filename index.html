@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Rating System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pain Rating System</h1>
+        
+        <!-- Login Section -->
+        <div id="loginSection" class="login-section">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <button onclick="login()" class="button">Login</button>
+        </div>
+
+        <!-- Rating Section -->
+        <div id="ratingSection" class="rating-section hidden">
+            <h2>Welcome, <span id="userDisplay"></span>!</h2>
+            <div class="form-group">
+                <label>Pain Level (0-10):</label>
+                <div class="pain-scale" id="painScale"></div>
+            </div>
+            <div class="actions">
+                <button onclick="submitRating()" class="button">Save Rating</button>
+                <button onclick="exportToJson()" class="button secondary">Export to JSON</button>
+                <button onclick="logout()" class="button secondary">Logout</button>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div id="historySection" class="history hidden">
+            <h2>Your Pain History</h2>
+            <div id="historyContainer"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
