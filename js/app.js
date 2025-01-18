@@ -114,7 +114,7 @@ function loadHistory() {
         entryDiv.className = 'entry';
         entryDiv.innerHTML = `
             <p><strong>Pain Level:</strong> ${entry.painLevel}</p>
-            <p><strong>Time:</strong> ${new Date(entry.timestamp).toLocaleString()}</p>
+            
         `;
         historyContainer.appendChild(entryDiv);
     });
